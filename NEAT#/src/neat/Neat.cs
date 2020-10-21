@@ -42,10 +42,10 @@ namespace neat
 		private double PROBABILITY_MUTATE_TOGGLE_LINK_ = 0.01;
 
 		private Dictionary<ConnectionGene, ConnectionGene> all_connections = new Dictionary<ConnectionGene, ConnectionGene>();
-		private data_structures.RandomHashSet<NodeGene> all_nodes = new data_structures.RandomHashSet<NodeGene>();
+		private data_structures.Listset<NodeGene> all_nodes = new data_structures.Listset<NodeGene>();
 
-		private data_structures.RandomHashSet<Client> clients = new data_structures.RandomHashSet<Client>();
-		private data_structures.RandomHashSet<Species> species = new data_structures.RandomHashSet<Species>();
+		private data_structures.Listset<Client> clients = new data_structures.Listset<Client>();
+		private data_structures.Listset<Species> species = new data_structures.Listset<Species>();
 
 		private int max_clients;
 		private int output_size;
@@ -277,7 +277,7 @@ namespace neat
 				@in[i] = GlobalRandom.NextDouble;
 			}
 
-			for (int i = 0; i < 1000; i++)
+			for (int i = 0; i < 500; i++)
 			{
 				foreach (Client c in neat.clients.Data)
 				{
@@ -298,7 +298,7 @@ namespace neat
 
 
 
-		public virtual data_structures.RandomHashSet<Client> Clients
+		public virtual data_structures.Listset<Client> Clients
 		{
 			get
 			{
@@ -512,7 +512,7 @@ namespace neat
 			}
 		}
 
-		public virtual data_structures.RandomHashSet<NodeGene> All_nodes
+		public virtual data_structures.Listset<NodeGene> All_nodes
 		{
 			get
 			{
@@ -524,7 +524,7 @@ namespace neat
 			}
 		}
 
-		public virtual data_structures.RandomHashSet<Species> Species
+		public virtual data_structures.Listset<Species> Species
 		{
 			get
 			{

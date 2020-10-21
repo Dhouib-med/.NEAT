@@ -18,8 +18,8 @@ namespace calculations
 
 		public Calculator(Genome g)
 		{
-			data_structures.RandomHashSet<NodeGene> nodes = g.Nodes;
-			data_structures.RandomHashSet<ConnectionGene> cons = g.Connections;
+			data_structures.Listset<NodeGene> nodes = g.Nodes;
+			data_structures.Listset<ConnectionGene> cons = g.Connections;
 
 			Dictionary<int, Node> nodeHashMap = new Dictionary<int, Node>();
 

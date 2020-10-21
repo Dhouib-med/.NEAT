@@ -9,8 +9,8 @@ namespace genome
 	public class Genome
 	{
 
-		private data_structures.RandomHashSet<ConnectionGene> connections = new data_structures.RandomHashSet<ConnectionGene>();
-		private data_structures.RandomHashSet<NodeGene> nodes = new data_structures.RandomHashSet<NodeGene>();
+		private data_structures.Listset<ConnectionGene> connections = new data_structures.Listset<ConnectionGene>();
+		private data_structures.Listset<NodeGene> nodes = new data_structures.Listset<NodeGene>();
 
 		private Neat neat;
 
@@ -220,7 +220,7 @@ namespace genome
 
 				con = neat.getConnection(con.From, con.To);
 				con.Weight = (GlobalRandom.NextDouble * 2 - 1) * neat.WEIGHT_RANDOM_STRENGTH;
-                data_structures.RandomHashSet<Gene> hi=new data_structures.RandomHashSet<Gene>();
+                data_structures.Listset<Gene> hi=new data_structures.Listset<Gene>();
 				hi.add_sorted(connections,con);
 				return;
 			}
@@ -292,7 +292,7 @@ namespace genome
 			}
 		}
 
-		public virtual data_structures.RandomHashSet<ConnectionGene> Connections
+		public virtual data_structures.Listset<ConnectionGene> Connections
 		{
 			get
 			{
@@ -300,7 +300,7 @@ namespace genome
 			}
 		}
 
-		public virtual data_structures.RandomHashSet<NodeGene> Nodes
+		public virtual data_structures.Listset<NodeGene> Nodes
 		{
 			get
 			{

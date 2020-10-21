@@ -5,13 +5,13 @@ namespace data_structures
 	using Gene = genome.Gene;
 
 
-	public class RandomHashSet<T>
+	public class Listset<T>
 	{
 
 		private HashSet<T> set;
 		private List<T> data;
 
-		public RandomHashSet()
+		public Listset()
 		{
 			set = new HashSet<T>();
 			data = new List<T>();
@@ -45,7 +45,7 @@ namespace data_structures
 			}
 		}
 
-		public virtual void add_sorted(RandomHashSet<genome.ConnectionGene> hash,genome.ConnectionGene @object)
+		public virtual void add_sorted(Listset<genome.ConnectionGene> hash,genome.ConnectionGene @object)
 		{ 
 			for (int i = 0; i < this.size(); i++)
 			{

@@ -7,7 +7,7 @@ namespace neat
 	public class Species
 	{
 
-		private data_structures.RandomHashSet<Client> clients = new data_structures.RandomHashSet<Client>();
+		private data_structures.Listset<Client> clients = new data_structures.Listset<Client>();
 		private Client representative;
 		private double score;
 
@@ -102,7 +102,7 @@ namespace neat
 			return clients.size();
 		}
 
-		public virtual data_structures.RandomHashSet<Client> Clients
+		public virtual data_structures.Listset<Client> Clients
 		{
 			get
 			{
